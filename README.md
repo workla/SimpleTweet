@@ -1,8 +1,8 @@
-# Project 2 - *Name of App Here*
+# Project 2 - SimpleTweet
 
-**Name of your app** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
+**SimpleTweet** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
-Time spent: **X** hours spent in total
+Time spent: 8 hours spent in total
 
 ## User Stories
 
@@ -42,7 +42,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had a hard time getting setup going.  The walkthroughs did not match the current layouts so I was applying the knowledge to new data.  I also had an issue when changing the api.properties file that BuildConfig did not find the proper BuildConfig class, until using the Run Generate Sources Gradle Tasks option that then allowed everything to properly be recognized.
+RecyclerView felt slightly easier this time, so that went smoothly.  
 
 ## Open-source libraries used
 
