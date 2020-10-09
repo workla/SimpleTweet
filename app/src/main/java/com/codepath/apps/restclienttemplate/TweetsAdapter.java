@@ -1,6 +1,11 @@
 package com.codepath.apps.restclienttemplate;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -70,6 +76,13 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         TextView tvScreenName;
         TextView tvRelativeDate;
         TextView tvName;
+        ImageView ivComment;
+        TextView tvComment;
+        ImageView ivRetweet;
+        TextView tvRetweet;
+        ImageView ivLike;
+        TextView tvLike;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -78,16 +91,33 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             tvRelativeDate = itemView.findViewById(R.id.tvRelativeDate);
             tvName = itemView.findViewById(R.id.tvName);
+            ivComment = itemView.findViewById(R.id.ivComment);
+            tvComment = itemView.findViewById(R.id.tvComment);
+            ivRetweet = itemView.findViewById(R.id.ivRetweet);
+            tvRetweet = itemView.findViewById(R.id.tvRetweet);
+            ivLike = itemView.findViewById(R.id.ivLike);
+            tvLike = itemView.findViewById(R.id.tvLike);
 
 
         }
 
+        @SuppressLint("ResourceAsColor")
         public void bind(Tweet tweet) {
             tvBody.setText(tweet.body);
             tvScreenName.setText("@" + tweet.user.screenName);
             tvName.setText(tweet.user.name);
             Glide.with(context).load(tweet.user.profileImageUrl).into(ivProfileImage);
             tvRelativeDate.setText(Tweet.getFormattedTimestamp(tweet));
+            String tvRetweetString = "" + tweet.retweetCount;
+            tvRetweet.setText(tvRetweetString);
+            String tvLikeString = "" + tweet.favoriteCount;
+            tvLike.setText(tvLikeString);
+            if (tweet.retweeted) {
+                ivRetweet.setImageResource(R.drawable.ic_vector_retweet);
+            }
+            if(tweet.favorited) {
+                ivLike.setImageResource(R.drawable.ic_vector_heart);
+            }
         }
     }
 }

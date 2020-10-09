@@ -1,6 +1,7 @@
 package com.codepath.apps.restclienttemplate.models;
 
 import android.text.format.DateUtils;
+import android.util.Log;
 
 import com.codepath.apps.restclienttemplate.TimeFormatter;
 
@@ -21,6 +22,11 @@ public class Tweet {
     public String createdAt;
     public User user;
     public long tweetId;
+    public long retweetCount;
+    public long favoriteCount;
+    public boolean favorited;
+    public boolean retweeted;
+
 
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException {
         Tweet tweet = new Tweet();
@@ -28,6 +34,11 @@ public class Tweet {
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.tweetId = jsonObject.getLong("id");
         tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
+        tweet.retweetCount = jsonObject.getLong("retweet_count");
+        Log.i("lauren", "retweetCount: " + tweet.retweetCount + " for tweet " + tweet.body);
+        tweet.favoriteCount = jsonObject.getLong("favorite_count");
+        tweet.favorited = jsonObject.getBoolean("favorited");
+        tweet.retweeted = jsonObject.getBoolean("retweeted");
 
         return tweet;
     }
