@@ -1,11 +1,20 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import android.text.format.DateUtils;
+
+import com.codepath.apps.restclienttemplate.TimeFormatter;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+
+
 
 public class Tweet {
     public String body;
@@ -31,4 +40,11 @@ public class Tweet {
 
         return tweets;
     }
+
+    public static String getFormattedTimestamp(Tweet tweet) {
+        String timeDiff;
+        timeDiff = TimeFormatter.getTimeDifference(tweet.createdAt);
+        return timeDiff;
+    }
+
 }
