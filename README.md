@@ -2,7 +2,7 @@
 
 **SimpleTweet** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
-Time spent: 13 hours spent in total
+Time spent: 16 hours spent in total
 
 ## User Stories
 
@@ -35,15 +35,22 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 The first gif shows the start of the program, with login screen for OAuth to the Twitter Timeline
+
 <img src='startup.gif' title='Start of App' width='' alt='Video Walkthrough' />
 
+
 The next gif shows the extra data pulled for each tweet with changes to the vectors based on if the tweet's status of being retweeted or favorited by the user is set to true.  Refresh is also shown (with proof of refresh shown with the change in retweets and favorites, as well as updated times on the tweets)
+
 <img src='refresh.gif' title='Refresh' width='' alt='Video Walkthrough 2' />
 
+
 Another gif with refresh, where new tweets have now been written by others, so new tweets show up in the timeline.
+
 <img src='refresh with new tweets.gif' title='Refresh 2' width='' alt='Video Walkthrough 3' />
 
+
 The final gif shows infinite scroll
+
 <img src='infinite scroll.gif' title='Infinite Scroll' width='' alt='Video Walkthrough 4' />
 
 ## Notes
