@@ -34,9 +34,17 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+The first gif shows the start of the program, with login screen for OAuth to the Twitter Timeline
+<img src='startup.gif' title='Start of App' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+The next gif shows the extra data pulled for each tweet with changes to the vectors based on if the tweet's status of being retweeted or favorited by the user is set to true.  Refresh is also shown (with proof of refresh shown with the change in retweets and favorites, as well as updated times on the tweets)
+<img src='refresh.gif' title='Refresh' width='' alt='Video Walkthrough 2' />
+
+Another gif with refresh, where new tweets have now been written by others, so new tweets show up in the timeline.
+<img src='refresh with new tweets.gif' title='Refresh 2' width='' alt='Video Walkthrough 3' />
+
+The final gif shows infinite scroll
+<img src='infinite scroll.gif' title='Infinite Scroll' width='' alt='Video Walkthrough 4' />
 
 ## Notes
 
