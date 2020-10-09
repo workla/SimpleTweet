@@ -17,7 +17,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [x] User can view more tweets as they scroll with infinite pagination
-- [ ] Improve the user interface and theme the app to feel "twitter branded"
+- [x] Improve the user interface and theme the app to feel "twitter branded"
 - [ ] Links in tweets are clickable and will launch the web browser
 - [ ] User can tap a tweet to display a "detailed" view of that tweet
 - [ ] User can see embedded image media within the tweet detail view
@@ -27,7 +27,8 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
+  - I collected data for number of likes and retweets for each tweet to display next to them.  I also change the vector file to resemble the Twitter feel when the user has liked or retweeted the particular tweet.
 
 ## Video Walkthrough
 
@@ -40,7 +41,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 I had a hard time getting setup going.  The walkthroughs did not match the current layouts so I was applying the knowledge to new data.  I also had an issue when changing the api.properties file that BuildConfig did not find the proper BuildConfig class, until using the Run Generate Sources Gradle Tasks option that then allowed everything to properly be recognized.
-RecyclerView felt slightly easier this time, so that went smoothly.  
+RecyclerView felt slightly easier this time, so that went smoothly.
+Manipulating the vectors dynamically based on info collected from the tweet JSON was a little tricky.  I particularly had trouble with tinting and ended up utilizing a different way to enact the color change, as all of the tints appeared to turn my images grey.
 
 ## Open-source libraries used
 
