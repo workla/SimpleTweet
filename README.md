@@ -36,7 +36,7 @@ Here's a walkthrough of implemented user stories:
 
 The first gif shows the start of the program, with login screen for OAuth to the Twitter Timeline
 
-<img src='startup.gif' title='Start of App' width='' alt='Video Walkthrough' />
+<img src='startup with oauth.gif' title='Start of App' width='' alt='Video Walkthrough' />
 
 
 The next gif shows the extra data pulled for each tweet with changes to the vectors based on if the tweet's status of being retweeted or favorited by the user is set to true.  Refresh is also shown (with proof of refresh shown with the change in retweets and favorites, as well as updated times on the tweets)
