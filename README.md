@@ -71,7 +71,7 @@ I had challenges implementing the character counter.  The walkthrough suggested 
 
 
 
-# Project 2 - SimpleTweet
+# LAST WEEK INFO
 
 **SimpleTweet** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
