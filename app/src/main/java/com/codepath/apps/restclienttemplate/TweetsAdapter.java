@@ -115,8 +115,14 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             if (tweet.retweeted) {
                 ivRetweet.setImageResource(R.drawable.ic_vector_retweet);
             }
+            else {
+                ivRetweet.setImageResource(R.drawable.ic_vector_retweet_stroke);
+            }
             if(tweet.favorited) {
                 ivLike.setImageResource(R.drawable.ic_vector_heart);
+            }
+            else {
+                ivLike.setImageResource(R.drawable.ic_vector_heart_stroke);
             }
         }
     }
