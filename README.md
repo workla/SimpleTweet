@@ -35,9 +35,22 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+The first gif shows a tweet composed.  It shows the compose icon being clicked.  When entering the tweet, the character counter is shown.  The tweet is manually inserted into the timeline after being submitted.  Parcelable was also used instead of serializable.  Twitter branded colors and styles are also added.
+
+<img src='week2 new tweet.gif' title='Successful Compose' width='' alt='Video Walkthrough' />
+
+
+The next gif shows that the program will not allow a tweet of more than 280 characters to be created.
+
+<img src='week2 tweet over size.gif' title='Successful Compose' width='' alt='Video Walkthrough' />
+
+
+The final gif shows that the program will not allow a blank tweet to be created.
+
+<img src='week2 blank tweet.gif' title='Successful Compose' width='' alt='Video Walkthrough' />
+
+
 
 ## Notes
 
